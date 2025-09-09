@@ -38,11 +38,14 @@ class _FormExampleState extends State<FormExample> {
       child: Container(
         margin: EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 10,
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
                 hintText: 'Enter your username',
+                border: OutlineInputBorder(),
               ),
               validator: (String? value) {
                 if (value == null || value.isEmpty) {
@@ -54,6 +57,11 @@ class _FormExampleState extends State<FormExample> {
             TextFormField(
               decoration: const InputDecoration(
                 hintText: 'Enter your password',
+                border: OutlineInputBorder(),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                  vertical: 10.0,
+                ),
               ),
               validator: (String? value) {
                 if (value == null || value.isEmpty) {
